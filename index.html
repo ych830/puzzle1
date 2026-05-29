@@ -1,0 +1,65 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Puzzle Slide Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="app">
+
+    <section id="start-screen" class="screen active">
+      <h1>Puzzle Slide</h1>
+      <p class="desc">숫자 타일을 움직여 순서대로 맞추는 퍼즐 게임</p>
+
+      <div class="difficulty-box">
+        <p>난이도 선택</p>
+        <button class="difficulty-btn selected" data-size="3">Easy 3x3</button>
+        <button class="difficulty-btn" data-size="4">Hard 4x4</button>
+      </div>
+
+      <button id="start-btn" class="main-btn">게임 시작</button>
+    </section>
+
+    <section id="game-screen" class="screen">
+      <div class="top-bar">
+        <div>
+          <span>이동 횟수</span>
+          <strong id="move-count">0</strong>
+        </div>
+        <div>
+          <span>시간</span>
+          <strong id="timer">0초</strong>
+        </div>
+      </div>
+
+      <div id="board" class="board"></div>
+
+      <div class="game-buttons">
+        <button id="shuffle-btn">다시 섞기</button>
+        <button id="home-btn">처음으로</button>
+      </div>
+    </section>
+
+    <section id="result-screen" class="screen">
+      <h2>퍼즐 완성!</h2>
+      <p>축하합니다. 퍼즐을 성공적으로 완성했습니다.</p>
+
+      <div class="result-box">
+        <p>걸린 시간: <strong id="final-time">0초</strong></p>
+        <p>이동 횟수: <strong id="final-moves">0</strong></p>
+        <p>최고 기록: <strong id="best-record">기록 없음</strong></p>
+      </div>
+
+      <button id="restart-btn" class="main-btn">다시하기</button>
+      <button id="result-home-btn" class="sub-btn">처음으로</button>
+    </section>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
